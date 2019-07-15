@@ -8,3 +8,13 @@ C:\Users\mende\source\repos\ChartProgram\ChartProgram\obj\Debug\ChartProgram.csp
 C:\Users\mende\source\repos\ChartProgram\ChartProgram\obj\Debug\ChartProgram.exe
 C:\Users\mende\source\repos\ChartProgram\ChartProgram\obj\Debug\ChartProgram.pdb
 C:\Users\mende\source\repos\ChartProgram\ChartProgram\obj\Debug\ChartProgram.FORM.resources
+C:\Users\mende\source\repos\Lab11\ChartProgram\ChartProgram\bin\Debug\ChartProgram.exe.config
+C:\Users\mende\source\repos\Lab11\ChartProgram\ChartProgram\bin\Debug\ChartProgram.exe
+C:\Users\mende\source\repos\Lab11\ChartProgram\ChartProgram\bin\Debug\ChartProgram.pdb
+C:\Users\mende\source\repos\Lab11\ChartProgram\ChartProgram\obj\Debug\ChartProgram.csprojAssemblyReference.cache
+C:\Users\mende\source\repos\Lab11\ChartProgram\ChartProgram\obj\Debug\ChartProgram.FORM.resources
+C:\Users\mende\source\repos\Lab11\ChartProgram\ChartProgram\obj\Debug\ChartProgram.Properties.Resources.resources
+C:\Users\mende\source\repos\Lab11\ChartProgram\ChartProgram\obj\Debug\ChartProgram.csproj.GenerateResource.cache
+C:\Users\mende\source\repos\Lab11\ChartProgram\ChartProgram\obj\Debug\ChartProgram.csproj.CoreCompileInputs.cache
+C:\Users\mende\source\repos\Lab11\ChartProgram\ChartProgram\obj\Debug\ChartProgram.exe
+C:\Users\mende\source\repos\Lab11\ChartProgram\ChartProgram\obj\Debug\ChartProgram.pdb

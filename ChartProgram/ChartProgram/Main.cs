@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ChartProgram
@@ -32,7 +25,7 @@ namespace ChartProgram
 
 			using (StreamWriter file = new StreamWriter(@"C:\Users\mende\source\repos\func2.txt"))
 			{
-				for (double x = -10.0; x < 10.0; x += 0.5f)
+				for (double x = -10.0; x < 10.0; x += 0.1)
 				{
 					file.WriteLine(Math.Sin(x));
 				}
@@ -43,36 +36,32 @@ namespace ChartProgram
 
 		private void REFRESHCHART_Tick(object sender, EventArgs e)
 		{
-			func1(FROM.Text, TO.Text, STEP.Text);
+			double F = double.Parse(FROM.Text);
+			double T = double.Parse(TO.Text);
+			double S = double.Parse(STEP.Text);
+			func1(F, T, S);
 		}
 
-		private void func1(string from, string to, string step)
+		private void func1(double from, double to, double step)
 		{
 			CHART.Series["F1"].Points.Clear();
 
 			double x;
-			double S;
-			double F;
-			double T;
 
-			S = double.Parse(step);
-			F = double.Parse(from);
-			T = double.Parse(to);
-
-			if (S < 0.5)
+			if (step < 0.01)
 			{
-				S = 0.5;
+				step = 0.01;
 			}
-			if (F < -50.0)
+			if (from < -50.0)
 			{
-				F = -50.0;
+				from = -50.0;
 			}
-			if (T > 50.0)
+			if (to > 50.0)
 			{
-				T = 50.0;
+				to = 50.0;
 			}
 
-			for (x = F; x < T; x += S)
+			for (x = from; x < to; x += step)
 			{
 				if (2.0 < x && x < 3.0)
 				{
@@ -91,13 +80,14 @@ namespace ChartProgram
 
 		private void LOAD_Click(object sender, EventArgs e)
 		{
+			CHART.Series["F2"].Points.Clear();
+
 			OPENFILE.InitialDirectory = @"C:\Users\mende\source\repos";
 			OPENFILE.DefaultExt = "txt";
 			OPENFILE.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
 
 			if (OPENFILE.ShowDialog() == DialogResult.OK)
 			{
-				CHART.Series["F2"].Points.Clear();
 
 				string[] file = File.ReadAllLines(OPENFILE.FileName);
 
@@ -105,7 +95,7 @@ namespace ChartProgram
 				foreach (string floats in file)
 				{
 					CHART.Series["F2"].Points.AddXY(x, double.Parse(floats));
-					x += 0.5;
+					x += 0.1;
 				}
 			}
 		}

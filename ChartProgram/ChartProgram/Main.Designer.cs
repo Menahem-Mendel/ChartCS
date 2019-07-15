@@ -48,25 +48,39 @@
 			this.CHART.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			chartArea1.AxisX.InterlacedColor = System.Drawing.Color.LightCyan;
+			chartArea1.AxisX.LineColor = System.Drawing.Color.Brown;
+			chartArea1.AxisX.LineWidth = 2;
+			chartArea1.AxisX2.LineColor = System.Drawing.Color.Red;
+			chartArea1.AxisX2.LineWidth = 2;
+			chartArea1.AxisY.InterlacedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			chartArea1.AxisY.LineColor = System.Drawing.Color.Olive;
+			chartArea1.AxisY.LineWidth = 2;
+			chartArea1.AxisY.TitleForeColor = System.Drawing.Color.White;
+			chartArea1.BackColor = System.Drawing.Color.White;
+			chartArea1.BackSecondaryColor = System.Drawing.Color.White;
 			chartArea1.Name = "ChartArea1";
 			this.CHART.ChartAreas.Add(chartArea1);
+			legend1.BackColor = System.Drawing.Color.Transparent;
+			legend1.BackSecondaryColor = System.Drawing.Color.White;
 			legend1.Name = "Legend1";
 			this.CHART.Legends.Add(legend1);
 			this.CHART.Location = new System.Drawing.Point(118, 12);
 			this.CHART.Name = "CHART";
+			this.CHART.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
 			series1.ChartArea = "ChartArea1";
-			series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+			series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
 			series1.Legend = "Legend1";
 			series1.Name = "F1";
 			series2.ChartArea = "ChartArea1";
-			series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+			series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
 			series2.Legend = "Legend1";
 			series2.Name = "F2";
 			this.CHART.Series.Add(series1);
 			this.CHART.Series.Add(series2);
-			this.CHART.Size = new System.Drawing.Size(670, 426);
+			this.CHART.Size = new System.Drawing.Size(1280, 749);
 			this.CHART.TabIndex = 0;
-			this.CHART.Text = "chart1";
+			this.CHART.Text = "CHART";
 			// 
 			// FROM
 			// 
@@ -95,12 +109,13 @@
 			// LOAD
 			// 
 			this.LOAD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.LOAD.Location = new System.Drawing.Point(12, 415);
+			this.LOAD.BackColor = System.Drawing.Color.Transparent;
+			this.LOAD.Location = new System.Drawing.Point(12, 738);
 			this.LOAD.Name = "LOAD";
 			this.LOAD.Size = new System.Drawing.Size(100, 23);
 			this.LOAD.TabIndex = 4;
 			this.LOAD.Text = "Load";
-			this.LOAD.UseVisualStyleBackColor = true;
+			this.LOAD.UseVisualStyleBackColor = false;
 			this.LOAD.Click += new System.EventHandler(this.LOAD_Click);
 			// 
 			// REFRESHCHART
@@ -115,7 +130,8 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.BackColor = System.Drawing.Color.White;
+			this.ClientSize = new System.Drawing.Size(1410, 773);
 			this.Controls.Add(this.LOAD);
 			this.Controls.Add(this.STEP);
 			this.Controls.Add(this.TO);
